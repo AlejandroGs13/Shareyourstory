@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -66,14 +67,12 @@ public class BaseDeDatos extends SQLiteOpenHelper {
     public void  addNota(String ID, String Text,View v) {
         SQLiteDatabase db = this.getWritableDatabase();
 
-        ContentValues values = new ContentValues();
-        values.put(NOTE_ID, ID);
-        values.put(NOTE_Text, Text);
 
         // Insertar
         try{
+            Log.i("NOTA","Entro"+ID+"--"+Text);
             //db.insert(TABLE_NOTAS, null, values);
-            String query = ("INSERT INTO "+TABLE_NOTAS+" ("+NOTE_ID+","+NOTE_Text+") VALUES('"+ID+"','"+Text+"','0');");
+            String query = ("INSERT INTO "+TABLE_NOTAS+" ("+NOTE_ID+","+NOTE_Text+") VALUES('"+ID+"','"+Text+"');");
             db.execSQL(query);
         }catch (SQLException ex){
 

@@ -6,13 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import static com.example.vanessa.shareyourstory.R.id.nuevahistoria;
 
 public class diario extends AppCompatActivity {
     private EditText nuevahisto;
     private EditText contenido;
-    BaseDeDatos bd = new BaseDeDatos(this);
+    BaseDeDatos bd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +21,11 @@ public class diario extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         nuevahisto = (EditText)findViewById(R.id.nueva);
         contenido = (EditText)findViewById(R.id.contenido);
+        bd = new BaseDeDatos(this);
         Button iniciar= (Button)findViewById(R.id.boton_entrar);
         iniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 bd.addNota(nuevahisto.getText().toString(),contenido.getText().toString(),v);
                 Intent iniciar = new Intent(getApplicationContext(), Lista.class);
                 startActivity(iniciar);

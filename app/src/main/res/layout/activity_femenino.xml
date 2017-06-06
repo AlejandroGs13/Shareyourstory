@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_femenino"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/lili"
+    tools:context="com.example.vanessa.shareyourstory.Femenino">
+
+    <EditText
+        android:id="@+id/usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="2"
+        android:hint="E-mail"/>
+
+    <Button
+        android:id="@+id/boton_entrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="2"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_blue_dark"
+        android:backgroundTint="#dcd3d3"
+        android:text="Iniciar Sesion"
+        android:drawableLeft="@drawable/lupa"
+        android:drawablePadding="8dp"
+        android:onClick="iniciar"
+        android:layout_alignParentBottom="true" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="2"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_alignBottom="@+id/boton_login"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkbox2"
+        android:layout_gravity="center_horizontal"
+        android:text="Mostrar password"
+        android:onClick="mostrarPWD"
+        android:layout_above="@+id/boton_entrar"
+        android:layout_alignEnd="@+id/boton_login"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="24dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkbox1"
+        android:layout_gravity="center_horizontal"
+        android:text="Recordar password"
+        android:layout_above="@+id/checkbox2"
+        android:layout_alignStart="@+id/checkbox2" />
+
+    <TextView
+        android:id="@+id/etiquetaolvido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="¿Olvido su Contraseña?"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#0E8AEE"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/boton_login"
+        android:src="@drawable/nota"
+        android:layout_gravity="center_horizontal"
+        android:onClick="Salir"
+        android:layout_marginEnd="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

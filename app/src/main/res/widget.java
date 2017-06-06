@@ -1,0 +1,6 @@
+/**
+ * Created by Escolar on 04/05/2017.
+ */
+
+public class widget {
+}

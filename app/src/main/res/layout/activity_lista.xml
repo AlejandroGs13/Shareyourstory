@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_lista"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/flor"
+    tools:context="com.example.vanessa.shareyourstory.Lista">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notas"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="14dp"
+        android:textSize="22dp"
+        android:textColor="#6E706C"
+        android:layout_marginTop="18dp"
+        android:id="@+id/textView"
+        android:fontFamily="sans-serif-condensed" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="42dp"
+        android:id="@+id/listapaginas"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
